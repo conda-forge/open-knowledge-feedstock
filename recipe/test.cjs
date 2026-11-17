@@ -7,7 +7,7 @@ const modules = path.join(process.env.PREFIX, "lib", "node_modules");
 const pkg = path.join(modules, "@inkeep", "open-knowledge");
 const fromApp = createRequire(path.join(pkg, "package.json"));
 for (const name of ["@napi-rs/keyring", "@parcel/watcher"]) {
-  assert.equal(fromApp.resolve(name), path.join(modules, name, "index.js"));
+  assert.equal(fromApp.resolve(name), fs.realpathSync(path.join(modules, name, "index.js")));
   fromApp(name);
 }
 
