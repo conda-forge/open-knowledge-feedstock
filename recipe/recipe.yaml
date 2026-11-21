@@ -1,5 +1,5 @@
 context:
-  version: "0.89.13"
+  version: "0.89.14"
 
 package:
   name: open-knowledge
@@ -7,10 +7,10 @@ package:
 
 source:
   - url: https://registry.npmjs.org/@inkeep/open-knowledge/-/open-knowledge-${{ version }}.tgz
-    sha256: 0fda3e5b6cda0070b56bdebbc8439b590a815aea957597989dc2a20414aeecb4
+    sha256: a1c82ff2d9495293042613946e0a31212ec650108ec2ccd861448bf035b9cb06
   # The npm tarball ships prebuilt native bindings only, build them from here.
   - url: https://github.com/inkeep/open-knowledge/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 361d745abe67635c17338130c347daf38a83a9483e05167673ca87546d9141e0
+    sha256: 4832b3cba249a5d8e48a32b02c1062c2fa40adf8579d28ebe28d307491ed8369
     target_directory: repo
     patches:
       # Use conda-forge's Rust compiler instead of requiring upstream's exact patch release.
